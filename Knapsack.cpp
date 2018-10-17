@@ -1,6 +1,5 @@
 #include "Knapsack.hpp"
-#include <stdlib.h>
-#include <time.h>  
+
 
 using namespace std;
 
@@ -35,8 +34,21 @@ Knapsack::Knapsack(std::string filename){
         }
 	_beta = max;
 }
-
-
+void Knapsack::printFic(int nbEval,string filename){
+Knapsack s(filename);	
+ofstream fichier("stat.csv", ios::out | ios::trunc);
+	 if(fichier) {
+		fichier<<"Nombre d'évaluation  Performance"<<endl; 
+		for(int i=1;i<nbEval;i++){
+			s.rechercheAleatoire(nbEval,filename);
+			fichier<<i;
+			}
+			fichier.close();
+	}
+	else {
+		cerr << "Impossible d'ouvrir le fichier !" << endl;
+	}
+}
 
 void Knapsack::eval(Solution &s)
 {
@@ -84,6 +96,7 @@ cout<<"beta "<<_beta<<endl;
 
 void Knapsack::rechercheAleatoire(int nbEval,string filename){
     Solution s1;
+    float evalMax=0.0;
     srand(time(NULL));
     for(int i=0;i<nbEval;i++){
      s1._vecbool.resize(n);
@@ -93,5 +106,7 @@ void Knapsack::rechercheAleatoire(int nbEval,string filename){
 
 	Knapsack k1(filename);
 	k1.eval(s1);
+	k1.eval(s1);
+	evalMax=(s1.fitness>evalMax)? s1.fitness : evalMax;
 	}	
 }

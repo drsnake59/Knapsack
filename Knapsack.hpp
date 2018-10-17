@@ -5,6 +5,9 @@
 #include <vector>
 #include <fstream>
 #include "Solution.hpp"
+#include <stdlib.h>
+#include <time.h>  
+
 using namespace std;
 
 class Knapsack{
@@ -16,6 +19,7 @@ class Knapsack{
         int n;//nombre d'element du sac
 
 		Knapsack(string filename);
+		void printFic(int nbEval,string filename);
 		void eval(Solution & s);
 		void print();
 		void rechercheAleatoire(int nbEval,string filename);
