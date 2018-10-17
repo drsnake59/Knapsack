@@ -15,10 +15,10 @@ class Knapsack{
         double _beta;
         int n;//nombre d'element du sac
 
-		Knapsack(std::string filename);
+		Knapsack(string filename);
 		void eval(Solution & s);
 		void print();
-		//void rechercheAleatoire(int nbEval);
+		void rechercheAleatoire(int nbEval,string filename);
 
 };
 #endif

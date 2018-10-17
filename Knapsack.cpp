@@ -38,7 +38,7 @@ Knapsack::Knapsack(std::string filename){
 
 
 
-void Knapsack::eval(Solution & s)
+void Knapsack::eval(Solution &s)
 {
 int profi =0;
 int poi =0;
@@ -82,11 +82,16 @@ cout<<"beta "<<_beta<<endl;
 
 	}
 
-void Knapsack::rechercheAleatoire(int nbEval){
-    Solution s1;	
-	for(int i=0;i<s1.size();i++){
-		srand(time(NULL));
-		vecbool[i]=rand()%1;
-			}
-	}
+void Knapsack::rechercheAleatoire(int nbEval,string filename){
+    Solution s1;
+    srand(time(NULL));
+    for(int i=0;i<nbEval;i++){
+     s1._vecbool.resize(n);
+	for(int i=0;i<n;i++){
+		s1._vecbool[i]=rand()%2;
+		}
 
+	Knapsack k1(filename);
+	k1.eval(s1);
+	}	
+}
