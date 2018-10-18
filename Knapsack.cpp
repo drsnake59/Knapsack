@@ -91,9 +91,8 @@ cout<<_poids[i]<<" ";
 cout<<endl;
 cout<<"capacite "<<_capacite<<endl;
 cout<<"beta "<<_beta<<endl;
-
-	}
-
+}
+//utile pour printFic
 float Knapsack::rechercheAleatoire(int nbEval,string filename){
     Solution s1;
     float evalMax=0.0;
