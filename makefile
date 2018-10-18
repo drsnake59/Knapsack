@@ -6,6 +6,9 @@ Knapsack.o:	Knapsack.cpp
 	
 Solution.o:	Solution.cpp 
 	g++ -std=c++11 -c Solution.cpp
+	
+Rs.o:	Rs.cpp 
+	g++ -std=c++11 -c Rs.cpp
 
 main.o: main.cpp
 	g++ -std=c++11 -c main.cpp
