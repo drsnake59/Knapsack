@@ -4,14 +4,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <fstream>
-#include "Solution.hpp"
-#include "Knapsack.hpp"
 
 using namespace std;
 
-class Search {
+class Search{
 	public:
-		virtual void run(int n, string file)=0;
-}
+		virtual float run(int n, string file) const = 0;
+};
 #endif

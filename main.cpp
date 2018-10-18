@@ -1,15 +1,19 @@
-#include "Solution.hpp"
+#include "Search.hpp"
 #include "Knapsack.hpp"
-#include <fstream>
-#include <vector>
-#include <string> 
+#include "Rs.hpp"
 
 using namespace std;
 
 int main(int argc, char * argv[]) {
- string filename=argv[1];
+
+string filename=argv[1];
+
 Knapsack s(filename);
-s.rechercheAleatoire(10000,filename);
-s.printFic(100,filename);
-  return 0;
+Rs random;
+
+Search * ptrSearch=nullptr;
+ptrSearch=&random;
+ptrSearch->run(100000,filename);
+  
+return 0;
 }

@@ -4,9 +4,9 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include "Solution.hpp"
 #include <stdlib.h>
 #include <time.h>  
+#include "Solution.hpp"
 
 using namespace std;
 

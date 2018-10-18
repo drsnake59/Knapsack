@@ -1,6 +1,5 @@
 #include "Knapsack.hpp"
 
-
 using namespace std;
 
 Knapsack::Knapsack(std::string filename){
