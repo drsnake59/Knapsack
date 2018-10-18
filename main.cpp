@@ -9,7 +9,7 @@ using namespace std;
 int main(int argc, char * argv[]) {
  string filename=argv[1];
 Knapsack s(filename);
-s.rechercheAleatoire(100,filename);
+s.rechercheAleatoire(10000,filename);
 s.printFic(100,filename);
   return 0;
 }

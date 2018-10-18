@@ -22,7 +22,7 @@ class Knapsack{
 		void printFic(int nbEval,string filename);
 		void eval(Solution & s);
 		void print();
-		void rechercheAleatoire(int nbEval,string filename);
+		float rechercheAleatoire(int nbEval,string filename);
 
 };
 #endif
